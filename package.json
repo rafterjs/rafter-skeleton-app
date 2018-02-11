@@ -9,7 +9,7 @@
     ],
     "private": true,
     "scripts": {
-        "start": "nodemon --watch ./lib ./server.js --exec babel-node",
+        "start": "nodemon --watch ./lib --watch ./server.js ./server.js --exec babel-node",
         "test": "TODO"
     },
     "dependencies": {
@@ -19,7 +19,7 @@
         "lodash.trimstart": "^4.0.0",
         "moment": "2.20.1",
         "mongoose": "5.0.3",
-        "rafter": "0.0.3",
+        "rafter": "0.0.4",
         "winston": "2.4.0"
     },
     "description": "",

@@ -3,8 +3,11 @@ import winstonFactory from './lib/utils/winston-factory';
 
 const run = async () => {
     try {
-        const logger = winstonFactory('info');
-        const rafter = new Rafter(`${__dirname}/lib`, logger);
+        const logger = winstonFactory(process.env.NODE_LOG_LEVEL || 'info');
+        const rafter = new Rafter({
+            appDirectory: `${__dirname}/lib`,
+            logger: logger
+        });
         await rafter.start();
     } catch (error) {
         console.error(error);
