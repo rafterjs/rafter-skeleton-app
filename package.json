@@ -10,6 +10,8 @@
     "private": true,
     "scripts": {
         "start": "nodemon --watch ./lib --watch ./server.js ./server.js --exec babel-node",
+        "postinstall": "yarn import:users",
+        "import:users": "babel-node ./.bin/import-users.js",
         "test": "TODO"
     },
     "dependencies": {
@@ -19,7 +21,7 @@
         "lodash.trimstart": "^4.0.0",
         "moment": "2.20.1",
         "mongoose": "5.0.3",
-        "rafter": "0.0.4",
+        "rafter": "0.2.5",
         "winston": "2.4.0"
     },
     "description": "",
@@ -30,11 +32,12 @@
         "@babel/node": "^7.0.0-beta.39",
         "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.39",
         "@babel/preset-env": "^7.0.0-beta.39",
+        "@rafterjs/di-autoloader": "^0.2.5",
         "babel-eslint": "^7.2.3",
         "eslint": "^4.17.0",
         "nodemon": "^1.14.12"
     },
     "engines": {
-        "node": "9"
+        "node": ">10"
     }
 }
