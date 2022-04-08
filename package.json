@@ -19,7 +19,7 @@
         "lodash.get": "^4.0.0",
         "lodash.isstring": "^4.0.0",
         "lodash.trimstart": "^4.0.0",
-        "moment": "2.20.1",
+        "moment": "2.29.2",
         "mongoose": "5.7.5",
         "rafter": "0.2.5",
         "winston": "2.4.0"
